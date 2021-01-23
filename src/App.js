@@ -1,24 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import HelloDiv from './components/HelloDiv'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Future home of <code>retro video game collector</code> app
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HelloDiv />
   );
 }
 

@@ -1,0 +1,19 @@
+.navBar{
+    background-color: grey;
+}
+
+.mainLogo{
+    color: white;
+    align-items: flex-start;
+
+}
+
+a{
+    color: white;
+}
+
+.profilePicture, .notLoggedInPicture {
+    height: 60px;
+    width: auto;
+    justify-content: center;
+}

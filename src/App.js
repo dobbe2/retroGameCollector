@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Profile from './components/Profile';
 import PrivateRoute from './components/PrivateRoute';
 import Collection from "./components/Collection"
+import HelloDiv from './components/HelloDiv';
 
 function App() {
   const {loading} = useAuth0();
@@ -20,7 +21,9 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-          <Route path='/' exact />
+          <Route path='/' exact>
+            <HelloDiv />
+          </Route>
           <PrivateRoute path='/profile' component={Profile} />
           <PrivateRoute path='/collection' component={Collection} />
         </Switch>

@@ -6,7 +6,7 @@ import notLoggedInAvatar from "../../assets/notLoggedInAvatarPic.jpg";
 import placeholderLogo from "../../assets/nesController.png";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Form from 'react-bootstrap/Form';
 // import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
@@ -45,12 +45,17 @@ const NavBar = () => {
                         </span>
                     )}
 
-                    {isAuthenticated && <Button className='logOutButton' color="primary" variant="light" onClick={() => logout()}>Log Out</Button>}
-
                     {isAuthenticated && (
                         <span className='loggedInNavAvatar'>
-                            <Navbar.Text className='welcomeName'>Welcome { user.given_name } </Navbar.Text>
+
+                            <NavDropdown   title={user.given_name} id="basic-nav-dropdown userDropdown" className='welcomeName'>
+                            <NavDropdown.Item className='logOutButton' color='primary' variant='light' onClick={() => logout()}>Log Out</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item >Badges...Coming soon</NavDropdown.Item>
+                            </NavDropdown>
                             <img alt="profilePicture" className="profilePicture justify-content-end" src={user.picture} />
+
+                           
                             
 
                         </span>
@@ -61,52 +66,6 @@ const NavBar = () => {
                 </Navbar.Collapse>
             </Navbar>
         </div>
-
-        // <div className="navBar">
-        //     <Navbar bg="dark" variant="dark">
-        //         <Navbar.Brand href="/">
-        //             <img
-        //                 alt=""
-        //                 src={placeholderLogo}
-        //                 width="30"
-        //                 height="30"
-        //                 className="d-inline-block align-top"
-        //             />{' '}
-        //         Retro Game Collector
-        //         </Navbar.Brand>
-        //     {/* <div className="mainLogo" >
-        //         <h1>Retro Collector</h1>
-        //     </div> */}
-        //     <Nav className="mr-auto">
-
-            
-        //     {!isAuthenticated && (
-        //         <span>
-        //         <button color="primary" onClick={() => loginWithRedirect({})}>Log In</button>
-        //         <img alt="genericAvatar" className="notLoggedInPicture" src={notLoggedInAvatar} />
-        //         </span>
-        //     )}
-
-        //     {isAuthenticated && <button color="primary" onClick={() => logout()}>Log Out</button>}
-
-        //     {isAuthenticated && (
-        //         <span>
-        //             <Link to='/'>Home</Link>
-        //             <span>   </span>
-        //             <Link to='profile'>Profile</Link>
-        //             <span>  </span>
-        //             <Link to='collection'>Collection</Link>
-        //             <img alt="profilePicture" className="profilePicture justify-content-end" src={user.picture} />
-        //             <h2>Welcome { user.given_name } </h2>
-
-        //         </span>
-                
-        //     )}
-        //     {isAuthenticated}
-        //     </Nav>
-        //     </Navbar>
-            
-        // </div>
     )
 }
 

@@ -6,12 +6,13 @@ import Profile from './components/Profile';
 import PrivateRoute from './components/PrivateRoute';
 import Collection from "./components/Collection"
 import HelloDiv from './components/HelloDiv';
+import Spinner from 'react-bootstrap/Spinner'
 
 function App() {
   const {loading} = useAuth0();
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div><Spinner animation="border" /></div>
   }
 
   return (

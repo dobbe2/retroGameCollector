@@ -15,10 +15,24 @@
 }
 
 .welcomeName{
-    margin: 9% 15px 0;
+    margin: 22px 42px;
 }
+
+#userDropdown{
+    margin: -6px 0 0 -28px;
+}
+/* .dropdown-menu.show{
+    margin-left: -51px;
+} */
 
 .logOutButton{
     height: 100%;
-    margin-top: 22px;
+    /* margin-top: 22px; */
+}
+
+@media (max-width: 991px) { 
+    .logOutButton{
+        margin-top: auto;
+        
+    }
 }

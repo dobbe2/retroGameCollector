@@ -8,6 +8,10 @@ import Collection from "./components/Collection"
 import HelloDiv from './components/HelloDiv';
 import Spinner from 'react-bootstrap/Spinner'
 
+//access to APIKEY for RAWG
+let APIKEY = process.env.REACT_APP_RAWG_API_KEY;
+console.log("here is the APIKEY, remove before deployment " + APIKEY)
+
 function App() {
   const {loading} = useAuth0();
 

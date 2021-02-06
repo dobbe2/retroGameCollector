@@ -37,11 +37,11 @@ const NavBar = () => {
                         <Nav.Link href="/collection">Collection</Nav.Link>
                         <Nav.Link href="/profile">Profile</Nav.Link>
                     </Nav>
-                    <Nav inline>
+                    <Nav>
                     {!isAuthenticated && (
                         <span>
                         <Button color="primary" variant="light" onClick={() => loginWithRedirect({})}>Log In</Button>
-                        <img alt="genericAvatar" className="notLoggedInPicture" src={notLoggedInAvatar} />
+                        <img alt="genericAvatar" style={{borderRadius:"13%"}}className="notLoggedInPicture" src={notLoggedInAvatar} />
                         </span>
                     )}
 

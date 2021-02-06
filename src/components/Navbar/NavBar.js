@@ -20,7 +20,7 @@ const NavBar = () => {
     return(
         <div>
             <Navbar bg="dark" variant="dark" expand="lg">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <img
                     alt=""
                     src={placeholderLogo}

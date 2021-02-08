@@ -6,6 +6,7 @@ const Collection = () => {
         <div>
         <h1>Your Collection!</h1>
             <GameList />
+            <a href='/addToCollection' ><h1>Add More Games to Your Collection</h1></a>
         </div>
     )
 }

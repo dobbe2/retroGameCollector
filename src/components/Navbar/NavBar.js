@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { useAuth0 } from '../../react-auth0-spa';
 import "./styles.css"
 import notLoggedInAvatar from "../../assets/notLoggedInAvatarPic.jpg";
@@ -7,11 +6,7 @@ import placeholderLogo from "../../assets/nesController.png";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-// import Text from 'react-bootstrap/Text';
-// import Brand from 'react-bootstrap/NavbarBrand';
 
 const NavBar = () => {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -47,19 +42,13 @@ const NavBar = () => {
 
                     {isAuthenticated && (
                         <span className='loggedInNavAvatar'>
-
                             <NavDropdown   title={user.given_name} id="basic-nav-dropdown userDropdown" className='welcomeName'>
                             <NavDropdown.Item className='logOutButton' color='primary' variant='light' onClick={() => logout()}>Log Out</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item >Badges...Coming soon</NavDropdown.Item>
                             </NavDropdown>
                             <img alt="profilePicture" className="profilePicture justify-content-end" src={user.picture} />
-
-                           
-                            
-
                         </span>
-                        
                     )}
                     {isAuthenticated}
                     </Nav>

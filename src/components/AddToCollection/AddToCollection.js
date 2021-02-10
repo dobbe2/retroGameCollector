@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import './styles.css'
 
 // // Get the searched game input

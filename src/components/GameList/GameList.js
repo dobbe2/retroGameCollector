@@ -19,28 +19,28 @@ export default function GameList() {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>
+                    <td className='image'>
                         <img src={mario3} className="gameImage" />
                     </td>
-                    <td>Super Mario Bros. 3</td>
-                    <td>NES</td>
-                    <td>In Box, 2 copies</td>
+                    <td className='title'>Super Mario Bros. 3</td>
+                    <td className='system'>NES</td>
+                    <td className='description'>In Box, 2 copies</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td className='image'>
                         <img src={dkc} className='gameImage' />
                     </td>
-                    <td>Donkey Kong Country</td>
-                    <td>SNES</td>
-                    <td>Some Scratches on Label</td>
+                    <td className='title'>Donkey Kong Country</td>
+                    <td className='system'>SNES</td>
+                    <td className='description'>Some Scratches on Label</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td className='image'>
                         <img src={tetris} className='gameImage' />
                     </td>
-                    <td>Tetris</td>
-                    <td>NES</td>
-                    <td>Average</td>
+                    <td className='title'>Tetris</td>
+                    <td className='system'>NES</td>
+                    <td className='description'>Average</td>
                     </tr>
                 </tbody>
             </Table>

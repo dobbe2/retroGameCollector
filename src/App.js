@@ -10,10 +10,6 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Spinner from 'react-bootstrap/Spinner'
 // import AddToCollection from './components/AddToCollection/AddToCollection';
 
-//access to APIKEY for RAWG
-let APIKEY = process.env.REACT_APP_RAWG_API_KEY;
-console.log("here is the APIKEY, remove before deployment " + APIKEY)
-
 function App() {
   const {loading} = useAuth0();
 
